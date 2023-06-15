@@ -12,7 +12,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 df = pd.read_csv('attractionsEng.csv')
-bardtoken='WwiytssR_Lr_Ddif1Gl4z4wdC6AwDgKAvaDoe5XcnB9Yl7_2DGw6FjDiUkQ7EZ-PiogeQQ.'
+bardtoken=st.secrets["Bard_API "]
 # Load the MobileNetV2 model from TensorFlow Hub
 model_url = "https://tfhub.dev/google/tf2-preview/mobilenet_v2/feature_vector/4"
 model = tf.keras.Sequential([hub.KerasLayer(model_url, input_shape=(224, 224, 3))])
