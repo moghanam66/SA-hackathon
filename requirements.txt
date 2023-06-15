@@ -1,0 +1,4 @@
+plotly
+seaborn
+streamlit_player
+openai
