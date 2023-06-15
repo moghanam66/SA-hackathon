@@ -47,7 +47,7 @@ st.set_page_config(
 # set_background('_2f6e1e1c-5229-4fce-8241-9beea9c29c5d.jpeg')
 
 os.environ['OPENAI_API_KEY'] = st.secrets["openAI_API"]
-bardtoken=st.secrets["Bard_API"]
+bardtoken="WwiytssR_Lr_Ddif1Gl4z4wdC6AwDgKAvaDoe5XcnB9Yl7_2DGw6FjDiUkQ7EZ-PiogeQQ."
 
 @st.cache_data
 def bardAnswer(user_input,places,bardtoken=bardtoken):
