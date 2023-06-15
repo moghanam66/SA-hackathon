@@ -1,4 +1,11 @@
 plotly
-seaborn
-streamlit_player
+langchain
+streamlit_chat
+bardapi
+deep_translator
+transformers
+streamlit_custom_notification_box
+annoy
+tensorflow
+tensorflow_hub
 openai
