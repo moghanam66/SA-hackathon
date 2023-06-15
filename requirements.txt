@@ -10,3 +10,4 @@ tensorflow
 tensorflow_hub
 openai
 sentencepiece
+pytorch
