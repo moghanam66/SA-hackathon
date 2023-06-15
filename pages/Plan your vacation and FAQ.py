@@ -61,7 +61,7 @@ def bardAnswer(user_input,places,bardtoken=bardtoken):
     answer=bard.get_answer(f"give me a plan to vist the top ten sites that are suitable for this question ({user_input}) in this list ({places}) and their image url from this website https://www.visitsaudi.com")['content']
     return answer
 
-dfEng=pd.read_csv('/home/ahmed/Desktop/work/chatbotGPT/attractionsEng.csv')
+dfEng=pd.read_csv('attractionsEng.csv')
 tokenizer,model = loadModels()
 places=list(dfEng['attractionSite'])
 
