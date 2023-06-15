@@ -49,12 +49,6 @@ st.set_page_config(
 os.environ['OPENAI_API_KEY'] = st.secrets["openAI_API"]
 bardtoken=st.secrets["Bard_API"]
 
-@st.cache_resource
-def loadModels():
-    tokenizer = MarianTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-ar")
-    model = MarianMTModel.from_pretrained("Helsinki-NLP/opus-mt-en-ar")
-    return tokenizer,model
-
 @st.cache_data
 def bardAnswer(user_input,places,bardtoken=bardtoken):
     bard = Bard(token=bardtoken)
@@ -62,7 +56,6 @@ def bardAnswer(user_input,places,bardtoken=bardtoken):
     return answer
 
 dfEng=pd.read_csv('attractionsEng.csv')
-tokenizer,model = loadModels()
 places=list(dfEng['attractionSite'])
 
 col1,col2=st.columns([0.5,0.5])
