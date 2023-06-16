@@ -1,17 +1,10 @@
 import streamlit as st
-from bardapi import Bard
 import pandas as pd
 import re
-from streamlit_chat import message
 from deep_translator import GoogleTranslator
-from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.chat_models import ChatOpenAI
-from langchain.chains import ConversationalRetrievalChain,LLMChain,SequentialChain
+from langchain.chains import LLMChain,SequentialChain
 from langchain.prompts import ChatPromptTemplate
-from langchain.document_loaders.csv_loader import CSVLoader
-from langchain.vectorstores import FAISS
-import os 
-from streamlit_custom_notification_box import custom_notification_box
 import base64
 
 @st.cache_data
