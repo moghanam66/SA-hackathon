@@ -2,7 +2,7 @@ import streamlit as st
 import tensorflow as tf
 import tensorflow_hub as hub
 import numpy as np
-from bardapi import Bard
+from bardapi import BardCookies
 from annoy import AnnoyIndex
 import os
 from PIL import Image
@@ -11,8 +11,14 @@ import re
 import plotly.express as px
 import plotly.graph_objects as go
 
+cookie_dict = {
+    "__Secure-1PSID": "WwiytssR_Lr_Ddif1Gl4z4wdC6AwDgKAvaDoe5XcnB9Yl7_2DGw6FjDiUkQ7EZ-PiogeQQ.",
+    "__Secure-1PSIDTS": "sidts-CjEBLFra0qTYwrQLZIF58uFubjCnx3z3N6uyerb8DLHXtAD_f6gh3qXNqbHLYvJanhQaEAA",
+    # Any cookie values you want to pass session object.
+}
+
 df = pd.read_csv('attractionsEng.csv')
-bardtoken='WwiytssR_Lr_Ddif1Gl4z4wdC6AwDgKAvaDoe5XcnB9Yl7_2DGw6FjDiUkQ7EZ-PiogeQQ.'
+bard = BardCookies(cookie_dict=cookie_dict)
 # Load the MobileNetV2 model from TensorFlow Hub
 model_url = "https://tfhub.dev/google/tf2-preview/mobilenet_v2/feature_vector/4"
 model = tf.keras.Sequential([hub.KerasLayer(model_url, input_shape=(224, 224, 3))])
@@ -87,10 +93,10 @@ if uploaded_file is not None:
     row = df.loc[index_without_extension]
     # Create a sentence from column values (touristic places)
     sentence = f"The place : **{row['attractionSite']}**"
-    bard = Bard(token=bardtoken)
+    # bard = Bard(token=bardtoken)
     
     st.title(sentence)
-    answer=bard.get_answer(f"Hi")['content']
+    answer=bard.get_answer(f"Give me information about {row['attractionSite']}")['content']
     delimeters=re.findall(r"\[.*\]",answer)
     
     for deli in delimeters:
