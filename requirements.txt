@@ -1,7 +1,5 @@
-plotly
 langchain
 streamlit_chat
-git+https://github.com/dsdanielpark/Bard-API.git
 deep_translator
 transformers
 streamlit_custom_notification_box
@@ -10,3 +8,4 @@ tensorflow
 tensorflow_hub
 openai
 sentencepiece
+tiktoken
