@@ -1,5 +1,3 @@
-#import ellipsis as el
-#import folium as f
 import streamlit as st
 import tensorflow as tf
 import tensorflow_hub as hub
@@ -9,7 +7,6 @@ import os
 from PIL import Image
 import pandas as pd
 import openai
-import re
 
 st.set_page_config(
     page_title='Search by image',
