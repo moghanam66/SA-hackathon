@@ -90,7 +90,7 @@ if uploaded_file is not None:
     bard = Bard(token=bardtoken)
     
     st.title(sentence)
-    answer=bard.get_answer(f"Give me information about {row['attractionSite']}")['content']
+    answer=bard.get_answer(f"Hi")['content']
     delimeters=re.findall(r"\[.*\]",answer)
     
     for deli in delimeters:
