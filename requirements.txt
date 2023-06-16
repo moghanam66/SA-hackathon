@@ -9,3 +9,4 @@ tensorflow_hub
 openai
 sentencepiece
 tiktoken
+faiss-cpu
