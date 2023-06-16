@@ -1,7 +1,7 @@
 plotly
 langchain
 streamlit_chat
-bardapi
+git+https://github.com/dsdanielpark/Bard-API.git
 deep_translator
 transformers
 streamlit_custom_notification_box
