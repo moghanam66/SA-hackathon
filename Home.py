@@ -6,12 +6,12 @@ def main():
     # Congfiger the page attributes
     st.set_page_config(
     page_title='Ksa Vacation',
-    page_icon=":Travel:",
+    page_icon=":Travel:",   
     layout="wide")
 
     # Set the background and the logo
     set_background('vacation.jpeg')
-    add_logo("logo1.jpg")
+    add_logo("logo1.png")
 
     # Write down the title in the middle of the page
     _,col2,_= st.columns( [0.2,0.5, 0.1])
