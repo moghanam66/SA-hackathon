@@ -13,11 +13,6 @@ def main():
     set_background('vacation.jpeg')
     add_logo("logo4.png")
 
-    # Write down the title in the middle of the page
-    _,col2,_= st.columns( [0.3,0.5, 0.1])
-    with col2:
-        st.title(f'Launch your joy')
-
     st.markdown("""
     <style>
     .big-font {
@@ -25,8 +20,18 @@ def main():
     }
     </style>
     """, unsafe_allow_html=True)
+    
+    # Write down the title in the middle of the page
+    _,col2,_= st.columns( [0.3,0.5, 0.1])
+    with col2:
+        st.title('Travelogue')
+        st.header('Launch your joy')
+
+    
+    st.divider()
     st.markdown(f"""<h1 style="color:#AFE1AF;font-family: "Cooper Black";font-size:70px;">Are you planning a trip to Saudi Arabia but don't know where to start? Have you ever seen a photo of a place you like and wondered where you can find something similar in Saudi Arabia?\n\n</h1>""", unsafe_allow_html=True)
-    st.markdown("<h4 class='font-family:font-size: 1500px' >If so, then you've come to the right place! Our website is your one-stop shop for all things Saudi Arabia tourism. We have everything you need to plan your perfect trip and information on the best places to visit (supports English and Arabic languages).\n\n</h4>", unsafe_allow_html=True)
+    st.empty()
+    st.markdown("<h4>If so, then you've come to the right place! Our website is your one-stop shop for all things Saudi Arabia tourism. We have everything you need to plan your perfect trip and information on the best places to visit (supports English and Arabic languages).\n\n</h4>", unsafe_allow_html=True)
 
 
 
