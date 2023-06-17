@@ -54,20 +54,20 @@ def main():
             st.session_state['generated'].append(output)
                 
                 
-    # configure how th chat would be look like    
+    # Configure how the chat would look like    
     if st.session_state['generated']:
         with response_container:
             for i in range(len(st.session_state['generated'])):
                 message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="big-smile")
                 message(st.session_state["generated"][i], key=str(i), avatar_style="thumbs") 
 
-# Cache the answer to optimize the preformance and reduce any waisted cost. 
+# Cache the answer to optimize the performance and reduce any wasted cost. 
 @st.cache_data
-def conversational_chat(query,vectorstore):
+def conversational_chat(query,_vectorstore):
         # config the chain with the llm and the vector store
         chain = ConversationalRetrievalChain.from_llm(
             llm = ChatOpenAI(openai_api_key=OPENAI_API_KEY,temperature=0.0,model_name='gpt-3.5-turbo'),
-            retriever=vectorstore.as_retriever())
+            retriever=_vectorstore.as_retriever())
         
         result = chain({"question": query, 
         "chat_history": st.session_state['history']})
