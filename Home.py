@@ -11,7 +11,7 @@ def main():
 
     # Set the background and the logo
     set_background('vacation.jpeg')
-    add_logo("logo1.png")
+    add_logo("logo2.png")
 
     # Write down the title in the middle of the page
     _,col2,_= st.columns( [0.2,0.5, 0.1])
