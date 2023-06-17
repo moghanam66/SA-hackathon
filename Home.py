@@ -13,10 +13,10 @@ def main():
     set_background('vacation.jpeg')
     add_logo("logo4.png")
 
-    # Write down the title in the middle of the page
-    _,col2,_= st.columns( [0.2,0.5, 0.1])
-    with col2:
-        st.title(f'Want to Plan a vacation in Saudi Arabia?')
+    # # Write down the title in the middle of the page
+    # _,col2,_= st.columns( [0.2,0.5, 0.1])
+    # with col2:
+    #     st.title(f'Want to Plan a vacation in Saudi Arabia?')
 
     st.markdown("""
     <style>
