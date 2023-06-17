@@ -54,7 +54,7 @@ def main():
         with col2:
             st.image(user_img, caption="Uploaded Image", use_column_width=True)
 
-        # preproces the image and predict the vector representing theimage
+        # preproces the image and predict the vector representing the image
         user_img = load_and_preprocess_image(user_img)
         user_features = model.predict(np.expand_dims(user_img, axis=0))
 
@@ -64,7 +64,7 @@ def main():
         nearest_image_file = image_files[nearest_indices[0]]
         similar_image = Image.open(os.path.join(image_folder, nearest_image_file))
 
-        # Represent the similar image and the location of the place presented by the image
+        # Represent a similar image and the location of the place presented by the image
         col1,col2=st.columns([0.5,0.5])
         with col1:
             st.image(similar_image, caption="Similar Image", use_column_width=True)
@@ -79,14 +79,14 @@ def main():
             # Create a DataFrame with the coordinates
             df_coordinates = pd.DataFrame(coordinates)
 
-            # Display the map centered on the coordinates
+            # Display the map centred on the coordinates
             st.map(df_coordinates)
         
-        #Display all the info about the placr from the scrapped data
+        #Display all the info about the place from the scrapped data
         sentence = f"The place : {row['attractionSite']}, it's located in  {row['city']}, {row['description']}."
         st.title(sentence)
 
-        # Display MORE infroemation through chat GPT
+        # Display MORE information through chat GPT
         st.title(openAiDescription(row['attractionSite']))
 
 # Function to load and preprocess images
@@ -96,7 +96,7 @@ def load_and_preprocess_image(image):
     img = np.array(img) / 255.0  # Normalize image pixels to [0, 1]
     return img
 
-# Casche the features of each image to increase the preformance
+# Casche the features of each image to increase the performance
 @st.cache_resource
 def loadImages(_model):
     # Load dataset images and extract features
@@ -119,7 +119,7 @@ def loadImages(_model):
 
     return annoy_index,image_files,image_folder
 
-# Cache the answer to optimize the preformance and reduce any waisted cost. 
+# Cache the answer to optimize the performance and reduce any wasted cost. 
 @st.cache_data
 def openAiDescription(place):
     openai.api_key = OPENAI_API_KEY 
