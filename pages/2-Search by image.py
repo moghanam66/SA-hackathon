@@ -16,9 +16,10 @@ def main():
         page_title='Search by image',
         page_icon=":star:",layout="wide")
     
-    # Set the background
+    # Set the background and the logo
     set_background('wallpaper.jpeg')
-
+    add_logo("logo1.png")
+    
     # Set the title
     st.title("Image Similarity Search")
 
