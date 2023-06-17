@@ -16,7 +16,7 @@ def main():
 
     # Set the background and the logo
     set_background('wallpaper.jpeg')
-    add_logo("logo3.png")
+    add_logo("logo4.png")
     # Set the title
     st.title('Tell us what you want to do and let AI plan your stay for you.')
 
