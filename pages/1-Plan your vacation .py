@@ -26,16 +26,16 @@ def main():
     # Get all the names of the attraction sites
     placesDf=list(df['attractionSite'])
 
-    # Ask the user what he want to do 
+    # Ask the user what he wants to do 
     userInput = st.text_input(" What do you want to do in Saudi ?",'I want to visit fun sites')
 
     if userInput !='':
-        #Get the plane and the places to visit that was introduced by chat GBT
+        #Get the plane and the places to visit that chat GBT introduced
         answer=openAiPlaner(userInput,placesDf,OPENAI_API_KEY)
         plane=answer['plane']
         places=answer['places'].split('\n')
 
-        # Split the plans to days and translate it into Arabic if the question is in Arabic
+        # Split the plans into days and translate them into Arabic if the question is in Arabic
         days=plane.split('\n\n')
         for day in days:
             if re.fullmatch('^[\u0621-\u064A0-9 ]+$',userInput):
@@ -58,17 +58,17 @@ def main():
                     images.append(image[0])
                     captions.append(placeToDisplay)
 
-            # Display the images of the places mentioned in this day
+            # Display the images of the places mentioned on this day
             st.image(images,caption=captions,width=300)
 
-# Cache the answer to optimize the preformance and reduce any waisted cost. 
+# Cache the answer to optimize the performance and reduce any wasted cost. 
 @st.cache_data
 def openAiPlaner(question,placesDf,API_KEY):
 
     #Intialize the LLM
     llm = ChatOpenAI(openai_api_key=API_KEY,temperature=0)
 
-    # prompt template 1: Get all the suitable palces
+    # prompt template 1: Get all the suitable places
     first_prompt = ChatPromptTemplate.from_template(
         "This is a question from a tourist visiting Saudi Arabia:"
         "\n\n{Question}"
