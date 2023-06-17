@@ -33,7 +33,7 @@ def add_logo(logo_url: str, height: int = 20):
                 background-image: {logo};
                 background-repeat: no-repeat;
                 padding-top: {height - 20}px;
-                background-position: -50px -20px;
+                background-position: -150px -120px;
             }}
         </style>
         """,
