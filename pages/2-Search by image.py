@@ -125,7 +125,7 @@ def openAiDescription(place):
     openai.api_key = OPENAI_API_KEY 
     # Set the model and prompt
     model_engine = "text-davinci-003"
-    prompt =  f"Give a describtion about {place} in less than 70 words about in Saudi Arabia"
+    prompt =  f"Give a description about {place} in less than 70 words about in Saudi Arabia"
 
     # Set the maximum number of tokens to generate in the response
     max_tokens = 1024
