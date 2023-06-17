@@ -25,13 +25,9 @@ def main():
     }
     </style>
     """, unsafe_allow_html=True)
-    # st.markdown('<p class="big-font">This platform offers :\n</p>', unsafe_allow_html=True)
-    st.markdown("<h2 class='big-font'>Are you planning a trip to Saudi Arabia but don't know where to start? Have you ever seen a photo of a place you like and wondered where you can find something similar in Saudi Arabia?(supports English and Arabic languages).\n\n</h1>", unsafe_allow_html=True)
-    st.markdown("<h4 class='font-family:font-size: 1500px' >If so, then you've come to the right place! Our website is your one-stop shop for all things Saudi Arabia tourism. We have everything you need to plan your perfect trip, from information on the best places to visit to tips on how to get around.\n\n</h3>", unsafe_allow_html=True)
-    # st.markdown('<p class="big-font">Ask about any concern you want to investigate before going to Saudi Arabia (supports English and Arabic languages).\n</p>', unsafe_allow_html=True)
-        
-        
-        
+    st.markdown("<h2 class='big-font' style="color:#141517;" >Are you planning a trip to Saudi Arabia but don't know where to start? Have you ever seen a photo of a place you like and wondered where you can find something similar in Saudi Arabia?\n\n</h1>", unsafe_allow_html=True)
+    st.markdown("<h4 class='font-family:font-size: 1500px' >If so, then you've come to the right place! Our website is your one-stop shop for all things Saudi Arabia tourism. We have everything you need to plan your perfect trip, from information on the best places to visit to tips on how to get around (supports English and Arabic languages).\n\n</h3>", unsafe_allow_html=True)
+
 
 
 if __name__ == "__main__":
