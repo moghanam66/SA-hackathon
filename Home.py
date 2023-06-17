@@ -13,10 +13,10 @@ def main():
     set_background('vacation.jpeg')
     add_logo("logo4.png")
 
-    # # Write down the title in the middle of the page
-    # _,col2,_= st.columns( [0.2,0.5, 0.1])
-    # with col2:
-    #     st.title(f'Want to Plan a vacation in Saudi Arabia?')
+    # Write down the title in the middle of the page
+    _,col2,_= st.columns( [0.2,0.5, 0.1])
+    with col2:
+        st.title(f'Launch your joy')
 
     st.markdown("""
     <style>
@@ -26,8 +26,8 @@ def main():
     </style>
     """, unsafe_allow_html=True)
     # st.markdown('<p class="big-font">This platform offers :\n</p>', unsafe_allow_html=True)
-    st.markdown("<h1 class='big-font'>Are you planning a trip to Saudi Arabia but don't know where to start? Have you ever seen a photo of a place you like and wondered where you can find something similar in Saudi Arabia?(supports English and Arabic languages).\n\n</h1>", unsafe_allow_html=True)
-    st.markdown("<h3 class='font-family:font-size: 1500px' >If so, then you've come to the right place! Our website is your one-stop shop for all things Saudi Arabia tourism. We have everything you need to plan your perfect trip, from information on the best places to visit to tips on how to get around.\n\n</h3>", unsafe_allow_html=True)
+    st.markdown("<h2 class='big-font'>Are you planning a trip to Saudi Arabia but don't know where to start? Have you ever seen a photo of a place you like and wondered where you can find something similar in Saudi Arabia?(supports English and Arabic languages).\n\n</h1>", unsafe_allow_html=True)
+    st.markdown("<h4 class='font-family:font-size: 1500px' >If so, then you've come to the right place! Our website is your one-stop shop for all things Saudi Arabia tourism. We have everything you need to plan your perfect trip, from information on the best places to visit to tips on how to get around.\n\n</h3>", unsafe_allow_html=True)
     # st.markdown('<p class="big-font">Ask about any concern you want to investigate before going to Saudi Arabia (supports English and Arabic languages).\n</p>', unsafe_allow_html=True)
         
         
