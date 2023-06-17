@@ -14,7 +14,7 @@ def main():
     add_logo("logo4.png")
 
     # Write down the title in the middle of the page
-    _,col2,_= st.columns( [0.2,0.5, 0.1])
+    _,col2,_= st.columns( [0.3,0.5, 0.1])
     with col2:
         st.title(f'Launch your joy')
 
