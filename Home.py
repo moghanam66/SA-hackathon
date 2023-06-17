@@ -1,6 +1,4 @@
 import streamlit as st
-from pathlib import Path
-import base64
 from utils import *
 
 def main():
@@ -12,33 +10,29 @@ def main():
     layout="wide")
 
     # Set the background and the logo
-    set_background('vacation.png')
+    set_background('vacation.jpeg')
     add_logo("logo1.png")
 
     # Write down the title in the middle of the page
     _,col2,_= st.columns( [0.2,0.5, 0.1])
     with col2:
-        st.markdown('#\n#\n#') 
-        st.markdown(f'<h1 style="color:#141517;font-family: "Cooper Black";font-size:70px;">{"Want to plan your Ksa vacation?"}</h1>', unsafe_allow_html=True)
+        st.title(f'Want to plan your Ksa vacation?')
 
-# function to render the logo image at the side bar
-def add_logo(logo_url: str, height: int = 400):
-    logo = f"url(data:image/png;base64,{base64.b64encode(Path(logo_url).read_bytes()).decode()})"
-    st.markdown(
-        f"""
-        <style>
-            [data-testid="stSidebarNav"] {{
-                max-width: 100%;
-                height: 200;
-                background-image: {logo};
-                background-repeat: no-repeat;
-                padding-top: {height - 20}px;
-                background-position: -60px 40px;
-            }}
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
+    st.markdown("""
+    <style>
+    .big-font {
+        font-size:30px !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    st.markdown('<p class="big-font">This platform offers :\n</p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font">1- Plan your vacation through Saudi Arabia, just say what you want to do (supports English and Arabic languages).\n\n</p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font">2- Search by an image of what activity or place you want to see in Saudi Arabia.\n\n</p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font">3- Ask about any concern you want to investigate before going to Saudi Arabia (supports English and Arabic languages).\n</p>', unsafe_allow_html=True)
+        
+        
+        
+
 
 if __name__ == "__main__":
     main()

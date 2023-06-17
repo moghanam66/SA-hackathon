@@ -1,5 +1,6 @@
 import base64
 import streamlit as st
+from pathlib import Path
 
 OPENAI_API_KEY = "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"
 
@@ -19,3 +20,22 @@ def set_background(png_file):
     </style>
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
+
+# function to render the logo image at the side bar
+def add_logo(logo_url: str, height: int = 400):
+    logo = f"url(data:image/png;base64,{base64.b64encode(Path(logo_url).read_bytes()).decode()})"
+    st.markdown(
+        f"""
+        <style>
+            [data-testid="stSidebarNav"] {{
+                max-width: 105%;
+                height: 5;
+                background-image: {logo};
+                background-repeat: no-repeat;
+                padding-top: {height - 20}px;
+                background-position: -160px -100px;
+            }}
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
