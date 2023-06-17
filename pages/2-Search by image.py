@@ -18,7 +18,7 @@ def main():
     
     # Set the background and the logo
     set_background('wallpaper.jpeg')
-    add_logo("logo1.png")
+    add_logo("logo3.png")
     
     # Set the title
     st.title("Image Similarity Search")

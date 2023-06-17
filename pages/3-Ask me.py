@@ -15,7 +15,7 @@ def main():
         page_icon=":star:",layout="wide")
     # Set the background
     set_background('wallpaper.jpeg')
-    add_logo("logo1.png")
+    add_logo("logo3.png")
     # laod the scrapped data of FAQ
     tmp_file_path='FAQ.csv'
     loader = CSVLoader(file_path=tmp_file_path, encoding="utf-8", csv_args={
