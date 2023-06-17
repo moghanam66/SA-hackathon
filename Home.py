@@ -25,7 +25,7 @@ def main():
     _,col2,_= st.columns( [0.3,0.5, 0.1])
     with col2:
         st.markdown(f"""<h1 style="color:#41ba61;font-family: "Cooper Black";">Travelogue</h1>""", unsafe_allow_html=True)
-        _,column2,_= st.columns( [0.1,0.9, 0.1])
+        _,column2= st.columns( [0.1,2])
         with column2:
             st.markdown(f"""<h4 >Launch your joy</h4>""", unsafe_allow_html=True)
 
