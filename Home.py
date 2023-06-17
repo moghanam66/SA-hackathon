@@ -16,7 +16,7 @@ def main():
     # Write down the title in the middle of the page
     _,col2,_= st.columns( [0.2,0.5, 0.1])
     with col2:
-        st.title(f'Want to Plan you vacation in Saudi Arabia?')
+        st.title(f'Want to Plan you vacation in Saudi Arabia?' ,  unsafe_allow_html=True)
 
     st.markdown("""
     <style>
