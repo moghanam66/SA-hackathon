@@ -27,7 +27,7 @@ def main():
     """, unsafe_allow_html=True)
     # st.markdown('<p class="big-font">This platform offers :\n</p>', unsafe_allow_html=True)
     st.markdown("<p class='big-font'>Are you planning a trip to Saudi Arabia but don't know where to start? Have you ever seen a photo of a place you like and wondered where you can find something similar in Saudi Arabia?(supports English and Arabic languages).\n\n</p>", unsafe_allow_html=True)
-    st.markdown("<p class='family-font:font-size: 1500px' >If so, then you've come to the right place! Our website is your one-stop shop for all things Saudi Arabia tourism. We have everything you need to plan your perfect trip, from information on the best places to visit to tips on how to get around.\n\n</p>", unsafe_allow_html=True)
+    st.markdown("<p class='font-family:font-size: 1500px' >If so, then you've come to the right place! Our website is your one-stop shop for all things Saudi Arabia tourism. We have everything you need to plan your perfect trip, from information on the best places to visit to tips on how to get around.\n\n</p>", unsafe_allow_html=True)
     # st.markdown('<p class="big-font">Ask about any concern you want to investigate before going to Saudi Arabia (supports English and Arabic languages).\n</p>', unsafe_allow_html=True)
         
         
