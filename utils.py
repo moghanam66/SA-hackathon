@@ -22,18 +22,18 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # function to render the logo image at the side bar
-def add_logo(logo_url: str, height: int = 20):
+def add_logo(logo_url: str, height: int = 300):
     logo = f"url(data:image/png;base64,{base64.b64encode(Path(logo_url).read_bytes()).decode()})"
     st.markdown(
         f"""
         <style>
             [data-testid="stSidebarNav"] {{
-                max-width: 20%;
-                height: 50;
+                max-width: 90%;
+                height: 120;
                 background-image: {logo};
                 background-repeat: no-repeat;
                 padding-top: {height - 20}px;
-                background-position: -150px -120px;
+                background-position: 50px 50px;
             }}
         </style>
         """,
