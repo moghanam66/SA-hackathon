@@ -14,9 +14,9 @@ def main():
         page_title='Plan your vacation',
         page_icon=":star:",layout="wide")
 
-    # Set the background
+    # Set the background and the logo
     set_background('wallpaper.jpeg')
-
+    add_logo("logo1.png")
     # Set the title
     st.title('Tell us what you want to do and let AI plan your stay for you.')
 
