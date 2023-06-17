@@ -2,7 +2,7 @@ import base64
 import streamlit as st
 from pathlib import Path
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = st.secrets["openAI_API"]
 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
