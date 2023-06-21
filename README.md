@@ -5,11 +5,11 @@
 - **Image recommender** (pages/2-Search by image.py): user can upload any image for any place and the model would retrieve the most Saudi touristic place similar to this place and text generated out of the scrapped text about this place.
 - **Travel Planner** (pages/3-Ask me.py): user can write anything he needs and use Google Bard API for creating a plan for the tourist supported by more information about each place in this plan.
 
-**Note** : All services Supports (English and Arabic) Languages.
+**Note** : All services Supports (English and Arabic) Languages
 
 ![Project Flow](project-Flow.png)
 
-### Technologies Used :
+### Technologies Used:
 - LangChain
 - openAI
 - Streamlit
