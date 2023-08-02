@@ -91,7 +91,7 @@ def openAiPlaner(question,placesDf,API_KEY):
     overall_chain = SequentialChain(chains=[chain_one,chain_two],
     input_variables=["Question"],
     output_variables=["places",'plane'],
-    verbose=True)
+    verbose=False)
 
     return overall_chain(question)
 
