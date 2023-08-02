@@ -1,4 +1,4 @@
-langchain
+langchain==0.0.137
 streamlit_chat
 deep_translator
 transformers
